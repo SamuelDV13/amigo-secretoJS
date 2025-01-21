@@ -3,9 +3,15 @@ var listaAmigos = [];
 
 //Funcion para agregar un amigo a la lista
 function agregarAmigo(){
-    listaAmigos.push(document.getElementById("amigo").value);
-    limpiarCampo("amigo");
-    mostrarLista();
+    let nombre = document.getElementById("amigo").value;
+    
+    if(nombre != ""){
+        listaAmigos.push(nombre);
+        limpiarCampo("amigo");
+        mostrarLista();
+    } else{
+        alert("El nombre no puede estar vacio.");
+    }  
 }
 
 
